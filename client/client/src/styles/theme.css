@@ -1,0 +1,51 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #1e3a8a;
+  --color-primary-hover: #172554;
+  --color-secondary: #d97706;
+  
+  /* Backgrounds */
+  --bg-body: #f3f4f6;
+  --bg-card: #ffffff;
+  
+  /* Text */
+  --text-main: #111827;
+  --text-muted: #6b7280;
+
+  /* Status */
+  --status-success: #10b981;
+  --status-warning: #f59e0b;
+  --status-danger: #ef4444;
+  --status-info: #3b82f6;
+}
+
+.dark {
+  --color-primary: #3b82f6;
+  --bg-body: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #f9fafb;
+}
+:root {
+  /* --- LUXURY BRAND COLORS --- */
+  --primary: #1e3a8a;       /* Royal Blue */
+  --primary-dark: #172554;  /* Darker Blue */
+  --secondary: #d97706;     /* Gold */
+  
+  /* --- BACKGROUNDS --- */
+  --bg-body: #f3f4f6;       /* Light Gray Background */
+  --bg-white: #ffffff;
+  
+  /* --- TEXT COLORS --- */
+  --text-main: #1f2937;     /* Dark Grey for reading */
+  --text-muted: #6b7280;    /* Lighter Grey */
+  --text-light: #ffffff;
+  
+  /* --- STATUS COLORS --- */
+  --success: #10b981;       /* Green */
+  --danger: #ef4444;        /* Red */
+  --warning: #f59e0b;       /* Orange */
+  
+  /* --- SPACING & BORDERS --- */
+  --radius: 12px;           /* Rounded corners */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

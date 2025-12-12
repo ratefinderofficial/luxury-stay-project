@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 14px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #1e3a8a;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a8a;
+            text-transform: uppercase;
+        }
+        .invoice-title {
+            font-size: 36px;
+            color: #d97706;
+            font-weight: 300;
+            text-align: right;
+        }
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .info-box h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-bottom: 5px;
+        }
+        .info-box p {
+            margin: 0;
+            line-height: 1.5;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th {
+            background-color: #f3f4f6;
+            color: #1e3a8a;
+            padding: 12px;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .text-right { text-align: right; }
+        .text-center { text-align: center; }
+        
+        .totals {
+            width: 300px;
+            margin-left: auto;
+        }
+        .totals-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+        }
+        .totals-row.final {
+            border-top: 2px solid #1e3a8a;
+            margin-top: 10px;
+            padding-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <div class="logo">LuxuryStay</div>
+            <p>123 Luxury Avenue, Beverly Hills, CA<br>+1 (555) 123-4567<br>billing@luxurystay.com</p>
+        </div>
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p style="text-align: right;">
+                <strong>Invoice #:</strong> {{invoiceNumber}}<br>
+                <strong>Date:</strong> {{date}}<br>
+                <strong>Status:</strong> <span style="color: {{statusColor}}">{{status}}</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Bill To Info -->
+    <div class="info-section">
+        <div class="info-box">
+            <h3>Bill To:</h3>
+            <p><strong>{{guestName}}</strong></p>
+            <p>{{guestEmail}}</p>
+            <p>{{guestPhone}}</p>
+        </div>
+        <div class="info-box" style="text-align: right;">
+            <h3>Booking Details:</h3>
+            <p>Booking ID: {{bookingId}}</p>
+            <p>Room: {{roomNumber}}</p>
+            <p>Nights: {{nights}}</p>
+        </div>
+    </div>
+
+    <!-- Items Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th class="text-center">Quantity</th>
+                <th class="text-right">Unit Price</th>
+                <th class="text-right">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each items}}
+            <tr>
+                <td>{{description}}</td>
+                <td class="text-center">{{quantity}}</td>
+                <td class="text-right">${{unitPrice}}</td>
+                <td class="text-right">${{total}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <!-- Totals -->
+    <div class="totals">
+        <div class="totals-row">
+            <span>Subtotal:</span>
+            <span>${{subtotal}}</span>
+        </div>
+        <div class="totals-row">
+            <span>Tax (10%):</span>
+            <span>${{tax}}</span>
+        </div>
+        <div class="totals-row final">
+            <span>Total:</span>
+            <span>${{totalAmount}}</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Thank you for choosing LuxuryStay Hospitality.</p>
+        <p>Payment is due within 15 days of invoice date. Late payments may be subject to fees.</p>
+    </div>
+
+</body>
+</html>
