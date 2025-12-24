@@ -1,0 +1,20 @@
+@media print {
+  /* Hide sidebar, navbar, and buttons when printing */
+  nav, aside, button, .no-print {
+    display: none !important;
+  }
+  
+  /* Make body white and remove margins */
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ensure invoice takes full width */
+  .print-container {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+}

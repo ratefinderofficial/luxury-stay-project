@@ -1,0 +1,24 @@
+# Allow all crawlers
+User-agent: *
+
+# Allow Public Pages (Marketing)
+Allow: /
+Allow: /rooms
+Allow: /about
+Allow: /contact
+Allow: /services
+
+# Disallow Private/Internal Areas (Security)
+Disallow: /dashboard/
+Disallow: /staff-dashboard/
+Disallow: /guest/dashboard/
+Disallow: /users/
+Disallow: /billing/
+Disallow: /reports/
+Disallow: /settings/
+
+# Disallow API Calls
+Disallow: /api/
+
+# Sitemap location (Optional, if you generate one later)
+# Sitemap: https://www.luxurystay.com/sitemap.xml
