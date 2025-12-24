@@ -1,0 +1,22 @@
+{
+  "name": "LuxuryStay Hospitality HMS",
+  "short_name": "LuxuryStay",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f3f4f6",
+  "theme_color": "#1e3a8a",
+  "description": "Premium Hotel Management System for LuxuryStay Hospitality.",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
